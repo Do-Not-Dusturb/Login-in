@@ -11,3 +11,22 @@ function login() {
     }
 }
 
+// Set the user authentication status in the session storage
+function setAuthStatus(status) {
+    sessionStorage.setItem('authenticated', status);
+}
+
+// Check if the user is authenticated, redirect if not
+function checkAuth() {
+    const isAuthenticated = sessionStorage.getItem('authenticated');
+    if (!isAuthenticated || isAuthenticated !== 'true') {
+        window.location.href = 'login.html';
+    }
+}
+
+// Function to logout and clear authentication status
+function logout() {
+    sessionStorage.setItem('authenticated', 'false');
+    window.location.href = 'login.html';
+}
+
