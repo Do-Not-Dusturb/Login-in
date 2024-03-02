@@ -1,5 +1,3 @@
-// add your login code here or something
-// but this is mine tho
 function login() {
     const username = document.getElementById('usernameInput').value;
     const password = document.getElementById('passwordInput').value;
@@ -15,9 +13,3 @@ function login() {
 function setAuthStatus(status) {
     sessionStorage.setItem('authenticated', status);
 }
-
-function logout() {
-    sessionStorage.setItem('authenticated', 'false');
-    window.location.href = 'login.html';
-}
-
