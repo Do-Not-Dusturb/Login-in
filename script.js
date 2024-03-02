@@ -2,7 +2,7 @@ function login() {
     const username = document.getElementById('usernameInput').value;
     const password = document.getElementById('passwordInput').value;
 
-    if (username === 'doggy' && password === 'fanam') {
+    if (username === 'do_not_dusturb' && password === 'admin') {
         setAuthStatus('true');
         window.location.href = 'run.html';
     } else {
